@@ -11,7 +11,7 @@
 
 - Assurez-vous de disposer d'un serveur apache et de mysql sur votre machine.
     
-- Ouvrez le fichier connect\_db.php (chemin du fichier : utils/engine/connect\_db.php) dont le contenue ressemble a ceci.
+- Ouvrez le fichier connect\_db.php (chemin du fichier : app/connect\_db.php) dont le contenue ressemble a ceci.
     
     ```php
     <?php

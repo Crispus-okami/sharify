@@ -2,7 +2,7 @@
 session_start(); // demarrer la session
 if (!empty($_SESSION['id'])) { // si l'utilisateur est connecté
     $username = $_SESSION['username'];
-    require('utils/engine/functions.php'); // importer les fonctions
+    require('app/functions.php'); // importer les fonctions
 	$nav = '<a href="index.php" class="active">Accueil</a>
 	<a href="all.php">Appartements</a>
 	<a href="add.php">Ajouter</a>
@@ -18,7 +18,7 @@ if (!empty($_SESSION['id'])) { // si l'utilisateur est connecté
     $nav = '<a href="index.php" class="active">Accueil</a>
 	
 	<a href="login.php">Se connecter</a>';
-    require('utils/engine/functions.php'); // importer les fonctions
+    require('app/functions.php'); // importer les fonctions
 
     if(isset($_GET['search'])) // si le formulaire est bien envoyé
     {
@@ -42,18 +42,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/component.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="all" />
-<script src="js/modernizr.custom.js"></script>
+<link href="public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="public/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="public/css/component.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="public/css/lightbox.css" type="text/css" media="all" />
+<script src="public/js/modernizr.custom.js"></script>
 <!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
+<script src="public/js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript" src="public/js/move-top.js"></script>
+		<script type="text/javascript" src="public/js/easing.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
@@ -109,10 +109,10 @@ if(typeof _bsa !== 'undefined' && _bsa) {
      ga('require', 'urlChangeTracker');
      ga('send', 'pageview');
    </script>
-<script async src='https://p.w3layouts.com/js/autotrack.js'></script>
+<script async src='https://p.w3layouts.com/public/js/autotrack.js'></script>
 
 <meta name="robots" content="noindex">
-<body><link rel="stylesheet" href="https://p.w3layouts.com/assests/css/font-awesome.min.css">
+<body><link rel="stylesheet" href="https://p.w3layouts.com/assests/public/css/font-awesome.min.css">
 <!-- New toolbar-->
 <style>
 * {
@@ -272,7 +272,7 @@ RIGHT SIDEBAR TOGGLE SECTION
        <!--top-header-->
 		<!--bottom-->
 		  <section class="button">
-					<button id="showLeftPush"><img src="images/menu.png" alt=""></button>
+					<button id="showLeftPush"><img src="public/images/menu.png" alt=""></button>
 		   </section>
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<h3>Menu</h3>
@@ -286,7 +286,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 		  </nav>
 		  
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
+		<script src="public/js/classie.js"></script>
 		<script>
 			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 				showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -322,7 +322,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 <input type="text" class="text" name="search">
 					<input type="submit" value="SEARCH">
 				</form>
-				<div class="close-in"><img src="images/close.png" alt=""></div>
+				<div class="close-in"><img src="public/images/close.png" alt=""></div>
 			</div>
 			<div class="right"><button> </button></div>
 	</div>
@@ -455,7 +455,7 @@ function truncate($str, $width) {
 <!-- Bootstrap core JavaScript-->
     <!-- Placed at the end of the document so the pages load faster -->
 	<!-- js -->
-		 <script src="js/bootstrap.js"></script>
+		 <script src="public/js/bootstrap.js"></script>
 	<!-- js -->
 <!-- smooth scrolling -->
 	<script type="text/javascript">

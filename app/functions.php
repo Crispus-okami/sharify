@@ -30,7 +30,7 @@ function update_project($id)
         //Vérifier si tous les champs sont remplis
         $project = $_POST['name']; // nouveau nom du projet 
         $desc = $_POST['desc'];// nouvelle description du projet
-        $img_dir = "utils/media/img/"; // dossier de destination image
+        $img_dir = "public/media/img/"; // dossier de destination image
         $img_url = img_upload($img_dir); // upload la nouvelle photo
         $price = $_POST['price'];
         $loc = $_POST['loc'];
@@ -131,7 +131,7 @@ function add_project() // fontion d'ajout d'un nouveau projet
         $user_id = $_SESSION['id']; // id de l'utilisteur actuel
         $project = $_POST['name']; // nom du projet (spécifier pas l'utilisateur)
         $desc = $_POST['desc']; // description du projet
-        $img_dir = "utils/media/img/"; // dossier de destination des images uploader
+        $img_dir = "public/media/img/"; // dossier de destination des images uploader
         $img_url = img_upload($img_dir); // execution de la fontion d'upload de l'image qui retourne le chemin de l'image
         $slug = create_slug($project); // exectution de la fonction de création de slug
         /* L'architechture initiale du site a été pensée de façon à ce que chaque projet ait une page détails. Ainsi un projet serait identifier 
@@ -218,7 +218,9 @@ function create_user() // fonction de creation d'un utilisateur
                     $pass = sha1($_POST['pass1']); // crypter le mot de passe de l'utilisateur avec l'agorithme de hashage sha1
                     $create_user = $db->prepare('INSERT INTO users (username, email, password, ville) VALUES(?,?,?,?)'); // créer le nouvel utilisateur
                     $create_user->execute(array($username, $mail, $pass, $ville));
-                    header('location:login.php'); // rediriger l'utilisateur ver la page de connection
+                     // rediriger l'utilisateur ver la page de connection
+                     echo "<script>alert(\"Félicitations ! votre compte a été créer avec succès. Allez a la page de connexion pour pouvoir vous connecter.\")</script>";
+
 
                 } else // si les deux mot de passe ne sont pas identiques : 
                 {
